@@ -1,0 +1,218 @@
+﻿<div class="container-fluid bg-primary py-5 mb-5 page-header">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+                <h1 class="display-3 text-white animated slideInDown">Enrollment</h1>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center">
+                        <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Enrollment</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title bg-white text-center text-primary px-3">Enrollment Form</h6>
+            <h1 class="mb-5">Enrollment For New Student</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h5>Get In Touch</h5>
+                <p class="mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                <div class="d-flex align-items-center mb-3">
+                    <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                        <i class="fa fa-map-marker-alt text-white"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="text-primary">Office</h5>
+                        <p class="mb-0">123 Street, New York, USA</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mb-3">
+                    <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                        <i class="fa fa-phone-alt text-white"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="text-primary">Mobile</h5>
+                        <p class="mb-0">+012 345 67890</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primary" style="width: 50px; height: 50px;">
+                        <i class="fa fa-envelope-open text-white"></i>
+                    </div>
+                    <div class="ms-3">
+                        <h5 class="text-primary">Email</h5>
+                        <p class="mb-0">info@example.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-8 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
+                <form>
+                    <div class="row g-3">
+                        <!-- Name -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                <label for="name">Name</label>
+                            </div>
+                        </div>
+
+                        <!-- Father's Name -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="father_name" placeholder="Father's Name">
+                                <label for="father_name">Father's Name</label>
+                            </div>
+                        </div>
+
+                        <!-- Mother's Name -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="mother_name" placeholder="Mother's Name">
+                                <label for="mother_name">Mother's Name</label>
+                            </div>
+                        </div>
+
+                        <!-- Date of Birth -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="date" class="form-control" id="dob" placeholder="Date of Birth">
+                                <label for="dob">Date of Birth (as per certificate)</label>
+                            </div>
+                        </div>
+
+                        <!-- Gender -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <select class="form-control" id="gender">
+                                    <option value="" disabled selected>Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <label for="gender">Gender</label>
+                            </div>
+                        </div>
+
+                        <!-- Residential Address -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="res_address" placeholder="Residential Address">
+                                <label for="res_address">Residential Address</label>
+                            </div>
+                        </div>
+
+                        <!-- Permanent Address -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="perm_address" placeholder="Permanent Address">
+                                <label for="perm_address">Permanent Address</label>
+                            </div>
+                        </div>
+
+                        <!-- Admission for -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <select class="form-control" id="admission_for">
+                                    <option value="" disabled selected>Select Stream/Field</option>
+                                    <option value="science">Science</option>
+                                    <option value="arts">Arts</option>
+                                    <option value="commerce">Commerce</option>
+                                    <!-- Add more options as needed -->
+                                </select>
+                                <label for="admission_for">Admission for</label>
+                            </div>
+                        </div>
+
+                        <!-- Previous Exam Details Table -->
+                        <div class="col-12">
+                            <h5>Previous Exam Details</h5>
+
+                            <!-- University & Enrollment Number -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" placeholder="University">
+                                        <label>University</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" placeholder="Enrollment Number">
+                                        <label>Enrollment Number</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Center & Stream -->
+                            <div class="row mt-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" placeholder="Center">
+                                        <label>Center</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" placeholder="Stream">
+                                        <label>Stream</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Field, Marks Secured, Out of, and Class Obtained -->
+                            <div class="row mt-3">
+                                <div class="col-md-3">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" placeholder="Field">
+                                        <label>Field</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" placeholder="Marks Secured">
+                                        <label>Marks Secured</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" placeholder="Out of">
+                                        <label>Out of</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" placeholder="Class Obtained">
+                                        <label>Class Obtained</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sports Details -->
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Sports Details (if any)" id="sports_details" style="height: 100px"></textarea>
+                                <label for="sports_details">Sports Details (if any)</label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="col-12">
+                            <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
