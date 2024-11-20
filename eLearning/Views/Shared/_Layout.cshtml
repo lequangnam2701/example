@@ -54,6 +54,13 @@
                 <a asp-controller="Courses" asp-action="Index" class="nav-item nav-link">Courses</a>
                 <a asp-controller="Enrollment" asp-action="Index" class="nav-item nav-link">Enrollment</a>
                 <a asp-controller="Contact" asp-action="Index" class="nav-item nav-link">Contact</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">User</a>
+                    <div class="dropdown-menu fade-down m-0">
+                        <a asp-controller="Login" asp-action="Index" class="dropdown-item">Login</a>
+                        <a asp-controller="Register" asp-action="Index" class="dropdown-item">Register</a>
+                    </div>
+                </div>
             </div>
             <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
