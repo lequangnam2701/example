@@ -27,6 +27,7 @@ namespace eLearning.Models
         [Required(ErrorMessage = "Missing Input")]
         public int EnrollmentDetailId { get; set; }
         public DateTime CreatedDate { get; set; }
+        public int Status { get; set; }
         public FieldModel Feild { get; set; }
         public EnrollmentDetailsModel FeildDetails { get; set; }
     }

@@ -1,4 +1,4 @@
-﻿   <!-- Carousel Start -->
+﻿<!-- Carousel Start -->
 <div class="container-fluid p-0 mb-5">
     <div class="owl-carousel header-carousel position-relative">
         <div class="owl-carousel-item position-relative">
@@ -80,7 +80,141 @@
     </div>
 </div>
 <!-- Service End -->
-<!-- About Start -->
+<div class="container mt-5">
+    <!-- Form Điền Thông Tin Nhập Học -->
+    <h2 class="mb-4">Thông Tin Nhập Học</h2>
+    <form id="admissionForm">
+        <div class="mb-3">
+            <label for="fullName" class="form-label">Họ và Tên:</label>
+            <input type="text" id="fullName" class="form-control" placeholder="Nhập họ và tên" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" class="form-control" placeholder="Nhập email" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Số Điện Thoại:</label>
+            <input type="text" id="phone" class="form-control" placeholder="Nhập số điện thoại" required>
+        </div>
+        <div class="mb-3">
+            <label for="major" class="form-label">Chuyên Ngành Đăng Ký:</label>
+            <select id="major" class="form-select">
+                <option value="IT">Công Nghệ Thông Tin</option>
+                <option value="Business">Quản Trị Kinh Doanh</option>
+                <option value="Engineering">Kỹ Thuật</option>
+                <option value="Design">Thiết Kế</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Đăng Ký</button>
+    </form>
+
+    <!-- Thông Tin Tuyển Sinh -->
+    <h2 class="mt-5">Thông Tin Tuyển Sinh</h2>
+    <p>Trường chúng tôi cung cấp các chương trình học đa dạng với môi trường học tập hiện đại, chất lượng quốc tế.</p>
+    <ul>
+        <li>Thời gian tuyển sinh: 01/06 - 30/08.</li>
+        <li>Điều kiện xét tuyển: Tốt nghiệp THPT.</li>
+        <li>Liên hệ: <a href="mailto:admissions@university.com">admissions@university.com</a>.</li>
+    </ul>
+
+    <!-- Thông Tin Chuyên Ngành -->
+    <h2 class="mt-5">Thông Tin Chuyên Ngành</h2>
+    <hr>
+    <div class="container mt-5">
+        <!-- Chi Tiết Khóa Học -->
+        <p>Trường chúng tôi cung cấp đa dạng các khóa học thuộc các chuyên ngành khác nhau. Dưới đây là thông tin chi tiết:</p>
+
+        <div class="accordion" id="courseDetails">
+            <!-- Công Nghệ Thông Tin -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingIT">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIT" aria-expanded="true" aria-controls="collapseIT">
+                        Công Nghệ Thông Tin
+                    </button>
+                </h2>
+                <div id="collapseIT" class="accordion-collapse collapse show" aria-labelledby="headingIT" data-bs-parent="#courseDetails">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Chương trình đào tạo chuyên sâu về lập trình, an ninh mạng, và trí tuệ nhân tạo</li>
+                            <li>Lập Trình Web - Thời lượng: 3 tháng</li>
+                            <li>An Ninh Mạng - Thời lượng: 4 tháng</li>
+                            <li>Trí Tuệ Nhân Tạo - Thời lượng: 6 tháng</li>
+                            <li>Khoa Học Dữ Liệu - Thời lượng: 5 tháng</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quản Trị Kinh Doanh -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingBusiness">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBusiness" aria-expanded="false" aria-controls="collapseBusiness">
+                        Quản Trị Kinh Doanh
+                    </button>
+                </h2>
+                <div id="collapseBusiness" class="accordion-collapse collapse" aria-labelledby="headingBusiness" data-bs-parent="#courseDetails">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Học cách quản lý, lập kế hoạch, và chiến lược phát triển kinh doanh</li>
+                            <li>Quản Lý Dự Án - Thời lượng: 4 tháng</li>
+                            <li>Chiến Lược Marketing - Thời lượng: 3 tháng</li>
+                            <li>Tài Chính Doanh Nghiệp - Thời lượng: 5 tháng</li>
+                            <li>Phân Tích Dữ Liệu Kinh Doanh - Thời lượng: 4 tháng</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kỹ Thuật -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEngineering">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEngineering" aria-expanded="false" aria-controls="collapseEngineering">
+                        Kỹ Thuật
+                    </button>
+                </h2>
+                <div id="collapseEngineering" class="accordion-collapse collapse" aria-labelledby="headingEngineering" data-bs-parent="#courseDetails">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Chương trình thực hành kỹ thuật hiện đại, đáp ứng nhu cầu công nghiệp</li>
+                            <li>Kỹ Thuật Điện Tử - Thời lượng: 6 tháng</li>
+                            <li>Thiết Kế Mạch - Thời lượng: 4 tháng</li>
+                            <li>Tự Động Hóa Công Nghiệp - Thời lượng: 5 tháng</li>
+                            <li>Kỹ Thuật Robot - Thời lượng: 6 tháng</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thiết Kế -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingDesign">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDesign" aria-expanded="false" aria-controls="collapseDesign">
+                        Thiết Kế
+                    </button>
+                </h2>
+                <div id="collapseDesign" class="accordion-collapse collapse" aria-labelledby="headingDesign" data-bs-parent="#courseDetails">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>Thiết Kế Đồ Họa - Thời lượng: 3 tháng</li>
+                            <li>Thiết Kế UI/UX - Thời lượng: 4 tháng</li>
+                            <li>Thiết Kế 3D - Thời lượng: 5 tháng</li>
+                            <li>Chỉnh Sửa Video - Thời lượng: 3 tháng</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bài Báo Liên Quan -->
+    <h2 class="mt-5">Bài Báo Liên Quan</h2>
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action">Xu hướng công nghệ trong năm 2024</a>
+        <a href="#" class="list-group-item list-group-item-action">Vai trò của quản trị kinh doanh trong thời đại số</a>
+        <a href="#" class="list-group-item list-group-item-action">Tầm quan trọng của giáo dục STEM</a>
+    </div>
+</div>
+@* <!-- About Start -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-5">
@@ -119,9 +253,9 @@
         </div>
     </div>
 </div>
-<!-- About End -->
+<!-- About End --> *@
 <!-- Categories Start -->
-<div class="container-xxl py-5 category">
+@* <div class="container-xxl py-5 category">
     <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
@@ -350,7 +484,7 @@
         </div>
     </div>
 </div>
-<!-- Team End -->
+<!-- Team End --> *@
 <!-- Testimonial Start -->
 <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
