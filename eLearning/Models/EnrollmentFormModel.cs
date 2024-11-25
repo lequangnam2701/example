@@ -19,7 +19,7 @@ namespace eLearning.Models
         public int EnrollmentDetailsId { get; set; }
         public int AddressId { get; set; }
         public DateTime CreatedDate { get; set; }
-        public int Status { get; set; }
+        public string EnrollmentCode { get; set; }
         public FieldModel Field { get; set; }
         public EnrollmentDetailsModel EnrollmentDetails { get; set; }
         public AddressModel Address { get; set; }
