@@ -14,5 +14,6 @@ namespace eLearning.Repository
         public DbSet<EnrollmentFormModel> EnrollmentForm { get; set; }
         public DbSet<EnrollmentDetailsModel> EnrollmentDetails { get; set; }
         public DbSet<FieldModel> Fields { get; set; }
+        public DbSet<AddressModel> Address { get; set; }
     }
 }

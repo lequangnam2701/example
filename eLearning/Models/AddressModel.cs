@@ -2,17 +2,16 @@
 
 namespace eLearning.Models
 {
-    public class EnrollmentDetailsModel
+    public class AddressModel
     {
         [Key]
         public int Id { get; set; }
         [Required(ErrorMessage = "Missing Input")]
-        public string University { get; set; }
+        public string State { get; set; }
         [Required(ErrorMessage = "Missing Input")]
-        public string EnrollmentNumber { get; set; }
+        public string City { get; set; }
         [Required(ErrorMessage = "Missing Input")]
-        public string Field { get; set; }
-        [Required(ErrorMessage = "Missing Input")]
-        public int MarksSecured { get; set; }
+        public string Street { get; set; }
+
     }
 }

@@ -155,7 +155,7 @@ namespace eLearning.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("eLearning.Models.EnrollmentDetailsModel", b =>
+            modelBuilder.Entity("eLearning.Models.AddressModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -163,13 +163,30 @@ namespace eLearning.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Center")
+                    b.Property<string>("City")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ClassObtained")
+                    b.Property<string>("State")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Street")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Address");
+                });
+
+            modelBuilder.Entity("eLearning.Models.EnrollmentDetailsModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("EnrollmentNumber")
                         .IsRequired()
@@ -181,14 +198,6 @@ namespace eLearning.Migrations
 
                     b.Property<int>("MarksSecured")
                         .HasColumnType("int");
-
-                    b.Property<string>("OutOf")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Stream")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("University")
                         .IsRequired()
@@ -207,21 +216,21 @@ namespace eLearning.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("AddressId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("EnrollmentDetailId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("FatherName")
+                    b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("FeildDetailsId")
+                    b.Property<int>("EnrollmentDetailsId")
                         .HasColumnType("int");
-
-                    b.Property<string>("FeildId")
-                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("FieldId")
                         .HasColumnType("int");
@@ -229,38 +238,33 @@ namespace eLearning.Migrations
                     b.Property<int>("Gender")
                         .HasColumnType("int");
 
-                    b.Property<string>("MotherName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PermanentAddress")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ResidentialAddress")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("FeildDetailsId");
+                    b.HasIndex("AddressId");
 
-                    b.HasIndex("FeildId");
+                    b.HasIndex("EnrollmentDetailsId");
+
+                    b.HasIndex("FieldId");
 
                     b.ToTable("EnrollmentForm");
                 });
 
             modelBuilder.Entity("eLearning.Models.FieldModel", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -311,7 +315,6 @@ namespace eLearning.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("RoleId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
@@ -390,19 +393,29 @@ namespace eLearning.Migrations
 
             modelBuilder.Entity("eLearning.Models.EnrollmentFormModel", b =>
                 {
-                    b.HasOne("eLearning.Models.EnrollmentDetailsModel", "FeildDetails")
+                    b.HasOne("eLearning.Models.AddressModel", "Address")
                         .WithMany()
-                        .HasForeignKey("FeildDetailsId")
+                        .HasForeignKey("AddressId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("eLearning.Models.FieldModel", "Feild")
+                    b.HasOne("eLearning.Models.EnrollmentDetailsModel", "EnrollmentDetails")
                         .WithMany()
-                        .HasForeignKey("FeildId");
+                        .HasForeignKey("EnrollmentDetailsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("Feild");
+                    b.HasOne("eLearning.Models.FieldModel", "Field")
+                        .WithMany()
+                        .HasForeignKey("FieldId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("FeildDetails");
+                    b.Navigation("Address");
+
+                    b.Navigation("EnrollmentDetails");
+
+                    b.Navigation("Field");
                 });
 #pragma warning restore 612, 618
         }

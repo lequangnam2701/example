@@ -81,410 +81,118 @@
 </div>
 <!-- Service End -->
 <div class="container mt-5">
-    <!-- Form Điền Thông Tin Nhập Học -->
-    <h2 class="mb-4">Thông Tin Nhập Học</h2>
-    <form id="admissionForm">
-        <div class="mb-3">
-            <label for="fullName" class="form-label">Họ và Tên:</label>
-            <input type="text" id="fullName" class="form-control" placeholder="Nhập họ và tên" required>
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email:</label>
-            <input type="email" id="email" class="form-control" placeholder="Nhập email" required>
-        </div>
-        <div class="mb-3">
-            <label for="phone" class="form-label">Số Điện Thoại:</label>
-            <input type="text" id="phone" class="form-control" placeholder="Nhập số điện thoại" required>
-        </div>
-        <div class="mb-3">
-            <label for="major" class="form-label">Chuyên Ngành Đăng Ký:</label>
-            <select id="major" class="form-select">
-                <option value="IT">Công Nghệ Thông Tin</option>
-                <option value="Business">Quản Trị Kinh Doanh</option>
-                <option value="Engineering">Kỹ Thuật</option>
-                <option value="Design">Thiết Kế</option>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Đăng Ký</button>
-    </form>
-
-    <!-- Thông Tin Tuyển Sinh -->
-    <h2 class="mt-5">Thông Tin Tuyển Sinh</h2>
-    <p>Trường chúng tôi cung cấp các chương trình học đa dạng với môi trường học tập hiện đại, chất lượng quốc tế.</p>
+    <!-- Admission Information -->
+    <h2 class="mt-5">Admission Information</h2>
+    <hr>
+    <p>Our school offers a variety of programs in a modern learning environment with international quality.</p>
     <ul>
-        <li>Thời gian tuyển sinh: 01/06 - 30/08.</li>
-        <li>Điều kiện xét tuyển: Tốt nghiệp THPT.</li>
-        <li>Liên hệ: <a href="mailto:admissions@university.com">admissions@university.com</a>.</li>
+        <li>Admission period: 01/06 - 30/08.</li>
+        <li>Admission requirements: High school graduation.</li>
+        <li>Contact: <a href="mailto:admissions@university.com">admissions@university.com</a>.</li>
     </ul>
 
-    <!-- Thông Tin Chuyên Ngành -->
-    <h2 class="mt-5">Thông Tin Chuyên Ngành</h2>
+    <!-- Program Information -->
+    <h2 class="mt-5">Program Information</h2>
     <hr>
     <div class="container mt-5">
-        <!-- Chi Tiết Khóa Học -->
-        <p>Trường chúng tôi cung cấp đa dạng các khóa học thuộc các chuyên ngành khác nhau. Dưới đây là thông tin chi tiết:</p>
+        <!-- Course Details -->
+        <p>Our school provides a variety of courses in different disciplines. Below are the details:</p>
 
         <div class="accordion" id="courseDetails">
-            <!-- Công Nghệ Thông Tin -->
+            <!-- Information Technology -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingIT">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseIT" aria-expanded="true" aria-controls="collapseIT">
-                        Công Nghệ Thông Tin
+                        Information Technology
                     </button>
                 </h2>
                 <div id="collapseIT" class="accordion-collapse collapse show" aria-labelledby="headingIT" data-bs-parent="#courseDetails">
                     <div class="accordion-body">
                         <ul>
-                            <li>Chương trình đào tạo chuyên sâu về lập trình, an ninh mạng, và trí tuệ nhân tạo</li>
-                            <li>Lập Trình Web - Thời lượng: 3 tháng</li>
-                            <li>An Ninh Mạng - Thời lượng: 4 tháng</li>
-                            <li>Trí Tuệ Nhân Tạo - Thời lượng: 6 tháng</li>
-                            <li>Khoa Học Dữ Liệu - Thời lượng: 5 tháng</li>
+                            <li>Specialized training in programming, cybersecurity, and artificial intelligence</li>
+                            <li>Web Development - Duration: 3 months</li>
+                            <li>Cybersecurity - Duration: 4 months</li>
+                            <li>Artificial Intelligence - Duration: 6 months</li>
+                            <li>Data Science - Duration: 5 months</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Quản Trị Kinh Doanh -->
+            <!-- Business Administration -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingBusiness">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBusiness" aria-expanded="false" aria-controls="collapseBusiness">
-                        Quản Trị Kinh Doanh
+                        Business Administration
                     </button>
                 </h2>
                 <div id="collapseBusiness" class="accordion-collapse collapse" aria-labelledby="headingBusiness" data-bs-parent="#courseDetails">
                     <div class="accordion-body">
                         <ul>
-                            <li>Học cách quản lý, lập kế hoạch, và chiến lược phát triển kinh doanh</li>
-                            <li>Quản Lý Dự Án - Thời lượng: 4 tháng</li>
-                            <li>Chiến Lược Marketing - Thời lượng: 3 tháng</li>
-                            <li>Tài Chính Doanh Nghiệp - Thời lượng: 5 tháng</li>
-                            <li>Phân Tích Dữ Liệu Kinh Doanh - Thời lượng: 4 tháng</li>
+                            <li>Learn how to manage, plan, and strategize business development</li>
+                            <li>Project Management - Duration: 4 months</li>
+                            <li>Marketing Strategy - Duration: 3 months</li>
+                            <li>Corporate Finance - Duration: 5 months</li>
+                            <li>Business Data Analysis - Duration: 4 months</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Kỹ Thuật -->
+            <!-- Engineering -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingEngineering">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEngineering" aria-expanded="false" aria-controls="collapseEngineering">
-                        Kỹ Thuật
+                        Engineering
                     </button>
                 </h2>
                 <div id="collapseEngineering" class="accordion-collapse collapse" aria-labelledby="headingEngineering" data-bs-parent="#courseDetails">
                     <div class="accordion-body">
                         <ul>
-                            <li>Chương trình thực hành kỹ thuật hiện đại, đáp ứng nhu cầu công nghiệp</li>
-                            <li>Kỹ Thuật Điện Tử - Thời lượng: 6 tháng</li>
-                            <li>Thiết Kế Mạch - Thời lượng: 4 tháng</li>
-                            <li>Tự Động Hóa Công Nghiệp - Thời lượng: 5 tháng</li>
-                            <li>Kỹ Thuật Robot - Thời lượng: 6 tháng</li>
+                            <li>Modern engineering practice programs meeting industrial demands</li>
+                            <li>Electronics Engineering - Duration: 6 months</li>
+                            <li>Circuit Design - Duration: 4 months</li>
+                            <li>Industrial Automation - Duration: 5 months</li>
+                            <li>Robotics Engineering - Duration: 6 months</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Thiết Kế -->
+            <!-- Design -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingDesign">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDesign" aria-expanded="false" aria-controls="collapseDesign">
-                        Thiết Kế
+                        Design
                     </button>
                 </h2>
                 <div id="collapseDesign" class="accordion-collapse collapse" aria-labelledby="headingDesign" data-bs-parent="#courseDetails">
                     <div class="accordion-body">
                         <ul>
-                            <li>Thiết Kế Đồ Họa - Thời lượng: 3 tháng</li>
-                            <li>Thiết Kế UI/UX - Thời lượng: 4 tháng</li>
-                            <li>Thiết Kế 3D - Thời lượng: 5 tháng</li>
-                            <li>Chỉnh Sửa Video - Thời lượng: 3 tháng</li>
+                            <li>Graphic Design - Duration: 3 months</li>
+                            <li>UI/UX Design - Duration: 4 months</li>
+                            <li>3D Design - Duration: 5 months</li>
+                            <li>Video Editing - Duration: 3 months</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- Related Articles -->
+    <div>
+        <h2 class="mt-5">Related Articles</h2>
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">Technology Trends in 2024</a>
+            <a href="#" class="list-group-item list-group-item-action">The Role of Business Management in the Digital Age</a>
+            <a href="#" class="list-group-item list-group-item-action">The Importance of STEM Education</a>
+        </div>
+    </div>
+</div>
 
-    <!-- Bài Báo Liên Quan -->
-    <h2 class="mt-5">Bài Báo Liên Quan</h2>
-    <div class="list-group">
-        <a href="#" class="list-group-item list-group-item-action">Xu hướng công nghệ trong năm 2024</a>
-        <a href="#" class="list-group-item list-group-item-action">Vai trò của quản trị kinh doanh trong thời đại số</a>
-        <a href="#" class="list-group-item list-group-item-action">Tầm quan trọng của giáo dục STEM</a>
-    </div>
-</div>
-@* <!-- About Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                <div class="position-relative h-100">
-                    <img class="img-fluid position-absolute w-100 h-100" src="img/about.jpg" alt="" style="object-fit: cover;">
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                <h1 class="mb-4">Welcome to eLEARNING</h1>
-                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                <div class="row gy-2 gx-4 mb-4">
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
-                    </div>
-                </div>
-                <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- About End --> *@
-<!-- Categories Start -->
-@* <div class="container-xxl py-5 category">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Categories</h6>
-            <h1 class="mb-5">Courses Categories</h1>
-        </div>
-        <div class="row g-3">
-            <div class="col-lg-7 col-md-6">
-                <div class="row g-3">
-                    <div class="col-lg-12 col-md-12 wow zoomIn" data-wow-delay="0.1s">
-                        <a class="position-relative d-block overflow-hidden" href="">
-                            <img class="img-fluid" src="img/cat-1.jpg" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                <h5 class="m-0">Web Design</h5>
-                                <small class="text-primary">49 Courses</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.3s">
-                        <a class="position-relative d-block overflow-hidden" href="">
-                            <img class="img-fluid" src="img/cat-2.jpg" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                <h5 class="m-0">Graphic Design</h5>
-                                <small class="text-primary">49 Courses</small>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-md-12 wow zoomIn" data-wow-delay="0.5s">
-                        <a class="position-relative d-block overflow-hidden" href="">
-                            <img class="img-fluid" src="img/cat-3.jpg" alt="">
-                            <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin: 1px;">
-                                <h5 class="m-0">Video Editing</h5>
-                                <small class="text-primary">49 Courses</small>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-5 col-md-6 wow zoomIn" data-wow-delay="0.7s" style="min-height: 350px;">
-                <a class="position-relative d-block h-100 overflow-hidden" href="">
-                    <img class="img-fluid position-absolute w-100 h-100" src="img/cat-4.jpg" alt="" style="object-fit: cover;">
-                    <div class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3" style="margin:  1px;">
-                        <h5 class="m-0">Online Marketing</h5>
-                        <small class="text-primary">49 Courses</small>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Categories Start -->
-<!-- Courses Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Courses</h6>
-            <h1 class="mb-5">Popular Courses</h1>
-        </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="course-item bg-light">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid" src="img/course-1.jpg" alt="">
-                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4 pb-0">
-                        <h3 class="mb-0">$149.00</h3>
-                        <div class="mb-3">
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small>(123)</small>
-                        </div>
-                        <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
-                    </div>
-                    <div class="d-flex border-top">
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                        <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="course-item bg-light">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid" src="img/course-2.jpg" alt="">
-                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4 pb-0">
-                        <h3 class="mb-0">$149.00</h3>
-                        <div class="mb-3">
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small>(123)</small>
-                        </div>
-                        <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
-                    </div>
-                    <div class="d-flex border-top">
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                        <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="course-item bg-light">
-                    <div class="position-relative overflow-hidden">
-                        <img class="img-fluid" src="img/course-3.jpg" alt="">
-                        <div class="w-100 d-flex justify-content-center position-absolute bottom-0 start-0 mb-4">
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3 border-end" style="border-radius: 30px 0 0 30px;">Read More</a>
-                            <a href="#" class="flex-shrink-0 btn btn-sm btn-primary px-3" style="border-radius: 0 30px 30px 0;">Join Now</a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4 pb-0">
-                        <h3 class="mb-0">$149.00</h3>
-                        <div class="mb-3">
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small class="fa fa-star text-primary"></small>
-                            <small>(123)</small>
-                        </div>
-                        <h5 class="mb-4">Web Design & Development Course for Beginners</h5>
-                    </div>
-                    <div class="d-flex border-top">
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-user-tie text-primary me-2"></i>John Doe</small>
-                        <small class="flex-fill text-center border-end py-2"><i class="fa fa-clock text-primary me-2"></i>1.49 Hrs</small>
-                        <small class="flex-fill text-center py-2"><i class="fa fa-user text-primary me-2"></i>30 Students</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    <!-- Team Start -->
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-            <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
-            <h1 class="mb-5">Expert Instructors</h1>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item bg-light">
-                    <div class="overflow-hidden">
-                        <img class="img-fluid" src="img/team-1.jpg" alt="">
-                    </div>
-                    <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                        <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4">
-                        <h5 class="mb-0">Instructor Name</h5>
-                        <small>Designation</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="team-item bg-light">
-                    <div class="overflow-hidden">
-                        <img class="img-fluid" src="img/team-2.jpg" alt="">
-                    </div>
-                    <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                        <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4">
-                        <h5 class="mb-0">Instructor Name</h5>
-                        <small>Designation</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="team-item bg-light">
-                    <div class="overflow-hidden">
-                        <img class="img-fluid" src="img/team-3.jpg" alt="">
-                    </div>
-                    <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                        <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4">
-                        <h5 class="mb-0">Instructor Name</h5>
-                        <small>Designation</small>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="team-item bg-light">
-                    <div class="overflow-hidden">
-                        <img class="img-fluid" src="img/team-4.jpg" alt="">
-                    </div>
-                    <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                        <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                    <div class="text-center p-4">
-                        <h5 class="mb-0">Instructor Name</h5>
-                        <small>Designation</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Team End --> *@
+
+
+
 <!-- Testimonial Start -->
 <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">

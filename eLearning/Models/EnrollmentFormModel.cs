@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace eLearning.Models
 {
@@ -11,24 +12,16 @@ namespace eLearning.Models
         [Required(ErrorMessage = "Missing Input")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Missing Input")]
-        public string FatherName { get; set; }
-        [Required(ErrorMessage = "Missing Input")]
-        public string MotherName { get; set; }
-        [Required(ErrorMessage = "Missing Input")]
         public DateTime DateOfBirth { get; set; }
         [Required(ErrorMessage = "Missing Input")]
         public int Gender { get; set; }
-        [Required(ErrorMessage = "Missing Input")]
-        public string ResidentialAddress { get; set; }
-        [Required(ErrorMessage = "Missing Input")]
-        public string PermanentAddress { get; set; }
-        [Required(ErrorMessage = "Missing Input")]
         public int FieldId {  get; set; }
-        [Required(ErrorMessage = "Missing Input")]
-        public int EnrollmentDetailId { get; set; }
+        public int EnrollmentDetailsId { get; set; }
+        public int AddressId { get; set; }
         public DateTime CreatedDate { get; set; }
         public int Status { get; set; }
-        public FieldModel Feild { get; set; }
-        public EnrollmentDetailsModel FeildDetails { get; set; }
+        public FieldModel Field { get; set; }
+        public EnrollmentDetailsModel EnrollmentDetails { get; set; }
+        public AddressModel Address { get; set; }
     }
 }
