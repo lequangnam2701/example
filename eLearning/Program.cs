@@ -19,6 +19,8 @@ namespace eLearning
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddScoped<EmailService>();
+
             builder.Services.AddIdentity<IdentityUserModel, IdentityRole>()
                 .AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
 

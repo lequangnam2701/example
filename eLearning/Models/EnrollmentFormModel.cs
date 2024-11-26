@@ -7,7 +7,8 @@ namespace eLearning.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required(ErrorMessage = "Missing Input"), EmailAddress]
+        [EmailAddress(ErrorMessage = "Please enter a valid email address.")]
+        [Required(ErrorMessage = "Missing Input")]
         public string Email { get; set; }
         [Required(ErrorMessage = "Missing Input")]
         public string Name { get; set; }

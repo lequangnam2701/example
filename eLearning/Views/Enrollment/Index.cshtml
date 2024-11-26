@@ -1,4 +1,7 @@
-﻿<div class="container-fluid bg-primary py-5 mb-5 page-header">
+﻿@using eLearning.Models.ViewModels
+@model EnrollmentFormViewModel
+
+<div class="container-fluid bg-primary py-5 mb-5 page-header">
     <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
@@ -24,141 +27,116 @@
         <div class="row g-4">
 
             <div class="container col-lg-8 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                <form>
+                <form asp-action="Index" enctype="multipart/form-data">
                     <div class="row g-3">
+                        <!-- Email -->
                         <div class="col-md-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="email" placeholder="Your Email">
-                                <label for="email">Email</label>
+                                <input asp-for="Email" class="form-control" placeholder="Your Email" />
+                                <label asp-for="Email">Email</label>
+                                <span asp-validation-for="Email" class="text-danger"></span>
                             </div>
                         </div>
 
                         <!-- Name -->
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                <label for="name">Name</label>
+                                <input asp-for="Name" class="form-control" placeholder="Your Name" />
+                                <label asp-for="Name">Name</label>
+                                <span asp-validation-for="Name" class="text-danger"></span>
                             </div>
                         </div>
 
                         <!-- Date of Birth -->
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="date" class="form-control" id="dob" placeholder="Date of Birth">
-                                <label for="dob">Date of Birth (as per certificate)</label>
+                                <input asp-for="DateOfBirth" type="date" class="form-control" placeholder="Date of Birth" />
+                                <label asp-for="DateOfBirth">Date of Birth</label>
+                                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
                             </div>
                         </div>
 
                         <!-- Gender -->
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <select class="form-control" id="gender">
+                                <select asp-for="Gender" class="form-control">
                                     <option value="" disabled selected>Select Gender</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                    <option value="other">Other</option>
+                                    <option value="1">Male</option>
+                                    <option value="2">Female</option>
+                                    <option value="3">Other</option>
                                 </select>
-                                <label for="gender">Gender</label>
+                                <label asp-for="Gender">Gender</label>
+                                <span asp-validation-for="Gender" class="text-danger"></span>
                             </div>
                         </div>
-
 
                         <!-- Admission for -->
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <select class="form-control" id="admission_for">
+                                <select asp-for="FieldId" class="form-control" asp-items="ViewBag.Fields">
                                     <option value="" disabled selected>Select Stream/Field</option>
-                                    <option value="science">Science</option>
-                                    <option value="arts">Arts</option>
-                                    <option value="commerce">Commerce</option>
-                                    <!-- Add more options as needed -->
                                 </select>
-                                <label for="admission_for">Admission for</label>
+                                <label asp-for="FieldId">Admission for</label>
+                                <span asp-validation-for="FieldId" class="text-danger"></span>
                             </div>
                         </div>
 
-                        <!-- Residential Address -->
+                        <!-- Address Fields -->
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="res_address" placeholder="State Address">
-                                <label for="res_address">State</label>
+                                <input asp-for="Address.State" class="form-control" placeholder="State" />
+                                <label asp-for="Address.State">State</label>
+                                <span asp-validation-for="Address.State" class="text-danger"></span>
                             </div>
                         </div>
-
-                        <!-- Permanent Address -->
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="perm_address" placeholder="City Address">
-                                <label for="perm_address">City</label>
+                                <input asp-for="Address.City" class="form-control" placeholder="City" />
+                                <label asp-for="Address.City">City</label>
+                                <span asp-validation-for="Address.City" class="text-danger"></span>
                             </div>
                         </div>
-
                         <div class="col-md-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="perm_address" placeholder="Street Address">
-                                <label for="perm_address">Street</label>
+                                <input asp-for="Address.Street" class="form-control" placeholder="Street" />
+                                <label asp-for="Address.Street">Street</label>
+                                <span asp-validation-for="Address.Street" class="text-danger"></span>
                             </div>
                         </div>
 
-                        <!-- Previous Exam Details Table -->
-                        <div class="col-12">
-                            <h5>Previous Exam Details</h5>
-
-                            <!-- University & Enrollment Number -->
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" placeholder="University">
-                                        <label>University</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" placeholder="Enrollment Number">
-                                        <label>Enrollment Number</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Center & Stream -->
-                            <div class="row mt-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" placeholder="Stream">
-                                        <label>Stream/Field</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" placeholder="Marks Secured">
-                                        <label>Marks Secured</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Field, Marks Secured, Out of, and Class Obtained -->
-                            <div class="row mt-3">
-
-                                <!-- Registration Major >-->
-                                <div class="col-12">
-                                    <!-- #region  --><hr>
-                                    <br>
-                                    <label for="major" class="h5 form-label">Registration Major:</label>
-                                    <select id="major" class="form-select">
-                                        <option value="IT">Information Technology</option>
-                                        <option value="Business">Business Administration</option>
-                                        <option value="Engineering">Technique</option>
-                                        <option value="Design">Design</option>
-                                    </select>
-                                </div>
-
+                        <!-- Previous Exam Details -->
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input asp-for="EnrollmentDetails.University" class="form-control" placeholder="University" />
+                                <label asp-for="EnrollmentDetails.University">University</label>
+                                <span asp-validation-for="EnrollmentDetails.University" class="text-danger"></span>
                             </div>
                         </div>
-
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input asp-for="EnrollmentDetails.EnrollmentNumber" class="form-control" placeholder="Enrollment Number" />
+                                <label asp-for="EnrollmentDetails.EnrollmentNumber">Enrollment Number</label>
+                                <span asp-validation-for="EnrollmentDetails.EnrollmentNumber" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input asp-for="EnrollmentDetails.Field" class="form-control" placeholder="Stream" />
+                                <label asp-for="EnrollmentDetails.Field">Stream/Field</label>
+                                <span asp-validation-for="EnrollmentDetails.Field" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input asp-for="EnrollmentDetails.MarksSecured" class="form-control" placeholder="Marks Secured" />
+                                <label asp-for="EnrollmentDetails.MarksSecured">Marks Secured</label>
+                                <span asp-validation-for="EnrollmentDetails.MarksSecured" class="text-danger"></span>
+                            </div>
+                        </div>
 
                         <!-- Submit Button -->
                         <div class="col-12">
-                            <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+                            <button type="submit" class="btn btn-primary w-100 py-3">Submit</button>
                         </div>
                     </div>
                 </form>
@@ -167,3 +145,9 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
