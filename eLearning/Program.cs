@@ -11,6 +11,7 @@ namespace eLearning
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            //connect to db
             builder.Services.AddDbContext<DataContext>(options =>
             {
                 options.UseSqlServer(builder.Configuration["ConnectionStrings:ConnectedDb"]);
@@ -19,8 +20,16 @@ namespace eLearning
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddDistributedMemoryCache();
+
+            builder.Services.AddSession(optiones =>
+            {
+                optiones.IdleTimeout = TimeSpan.FromSeconds(30);
+                optiones.Cookie.IsEssential = true;
+            });
+
             builder.Services.AddIdentity<IdentityUserModel, IdentityRole>()
-                .AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
+                 .AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
 
             builder.Services.Configure<IdentityOptions>(options =>
             {
@@ -31,9 +40,8 @@ namespace eLearning
                 options.Password.RequireUppercase = false;
                 options.Password.RequiredLength = 4;
 
-                options.User.RequireUniqueEmail = true;
+                options.User.RequireUniqueEmail = false;
             });
-
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -56,7 +64,13 @@ namespace eLearning
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
-            app.Run();
+			app.MapControllerRoute(
+	            name: "custom",
+	            pattern: "create",
+	            defaults: new { controller = "Account", action = "Create" });
+
+
+			app.Run();
         }
     }
 }
