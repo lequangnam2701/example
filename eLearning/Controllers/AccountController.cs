@@ -14,8 +14,6 @@ namespace eLearning.Controllers
                 _userManager = userManager;
             }
 
-          
-
             public IActionResult Login(string returnUrl)
             {
                 return View(new LoginViewModel { ReturnUrl = returnUrl });
@@ -66,11 +64,11 @@ namespace eLearning.Controllers
                 }
                 return View(user);
             }
-        public async Task<IActionResult> Logout(string returnUrl = "/")
-        {
-            await _signInManager.SignOutAsync();
-            return Redirect(returnUrl);
-        }
+            public async Task<IActionResult> Logout(string returnUrl = "/")
+            {
+                await _signInManager.SignOutAsync();
+                return Redirect(returnUrl);
+            }
 
-    }
+        }
 }

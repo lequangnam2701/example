@@ -28,6 +28,9 @@ namespace eLearning
                 optiones.Cookie.IsEssential = true;
             });
 
+            builder.Services.AddScoped<EmailService>();
+
+
             builder.Services.AddIdentity<IdentityUserModel, IdentityRole>()
                  .AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
 
@@ -68,7 +71,6 @@ namespace eLearning
 	            name: "custom",
 	            pattern: "create",
 	            defaults: new { controller = "Account", action = "Create" });
-
 
 			app.Run();
         }

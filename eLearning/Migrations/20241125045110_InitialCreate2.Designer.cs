@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using eLearning.Repository;
 
@@ -11,9 +12,11 @@ using eLearning.Repository;
 namespace eLearning.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20241125045110_InitialCreate2")]
+    partial class InitialCreate2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -229,9 +232,6 @@ namespace eLearning.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EnrollmentCode")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("EnrollmentDetailsId")
                         .HasColumnType("int");
 
@@ -245,6 +245,9 @@ namespace eLearning.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("StatusId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("AddressId");
@@ -253,33 +256,9 @@ namespace eLearning.Migrations
 
                     b.HasIndex("FieldId");
 
-                    b.ToTable("EnrollmentForm");
-                });
-
-            modelBuilder.Entity("eLearning.Models.EnrollmentStatusHistory", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("ChangedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("EnrollmentFormId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("StatusId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("EnrollmentFormId");
-
                     b.HasIndex("StatusId");
 
-                    b.ToTable("EnrollmentStatus");
+                    b.ToTable("EnrollmentForm");
                 });
 
             modelBuilder.Entity("eLearning.Models.FieldModel", b =>
@@ -379,7 +358,7 @@ namespace eLearning.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Status");
+                    b.ToTable("StatusModel");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -453,28 +432,17 @@ namespace eLearning.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Address");
-
-                    b.Navigation("EnrollmentDetails");
-
-                    b.Navigation("Field");
-                });
-
-            modelBuilder.Entity("eLearning.Models.EnrollmentStatusHistory", b =>
-                {
-                    b.HasOne("eLearning.Models.EnrollmentFormModel", "EnrollmentForm")
-                        .WithMany()
-                        .HasForeignKey("EnrollmentFormId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("eLearning.Models.StatusModel", "Status")
                         .WithMany()
                         .HasForeignKey("StatusId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("EnrollmentForm");
+                    b.Navigation("Address");
+
+                    b.Navigation("EnrollmentDetails");
+
+                    b.Navigation("Field");
 
                     b.Navigation("Status");
                 });

@@ -2,14 +2,26 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Controllers\" />
+    <Compile Remove="Areas\Admin\Controllers\**" />
+    <Content Remove="Areas\Admin\Controllers\**" />
+    <EmbeddedResource Remove="Areas\Admin\Controllers\**" />
+    <None Remove="Areas\Admin\Controllers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+
     <Folder Include="Areas\Admin\Models\" />
+
+    <Folder Include="Areas\Admin\Controller\" />
     <Folder Include="Models\ViewModel\" />
+
+    <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
   <ItemGroup>
