@@ -1,0 +1,66 @@
+@model eLearning.Models.EnrollmentFormModel
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="container mt-5">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h4 class="section-title bg-white text-center text-primary px-3">Enrollment Form Details</h4>
+    </div>
+    <br>
+    <br>
+
+    <div class="card">
+        <div class="card-header">
+            <h5 class="card-title text-center">Details for @Model.Name</h5>
+        </div>
+        <div class="card-body">
+            <div class="mb-3">
+                <label class="form-label"><strong>Enrollment Code:</strong> @Model.EnrollmentCode</label>
+                
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label"><strong>Email:</strong> @Model.Email</label>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label"><strong>Name:</strong> @Model.Name</label>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label"><strong>Created Date:</strong> @Model.CreatedDate.ToString("dd/MM/yyyy")</label>
+            </div>
+        </div>
+        
+        <div class="card-header">
+                <h5 class="card-title text-center">Enrollment Details</h5>
+        </div>
+        <div class="card-body"> 
+            <div class="mb-3">
+                <label class="form-label"><strong>University:</strong> @Model.EnrollmentDetails.University</label>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label"><strong>Enrollment Number:</strong> @Model.EnrollmentDetails.EnrollmentNumber</label>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label"><strong>Field: @Model.EnrollmentDetails.Field</strong></label>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label"><strong>Marks Secured: @Model.EnrollmentDetails.MarksSecured</strong></label>
+            </div>
+
+            <div class="mt-4 text-center">
+                <a href="/AD/AD/Edit_Detail/@Model.Id" class="btn btn-primary btn-sm">Edit</a>
+            </div>
+
+            <div class="text-center mt-3">
+                <a href="/AD/AD/Index" class="btn btn-primary btn-sm">Back to List</a>
+            </div>
+        </div>
+    </div>
+</div>

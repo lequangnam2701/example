@@ -1,0 +1,53 @@
+﻿@model UserModel
+
+<div class="container-fluid bg-primary py-5 mb-5 page-header">
+	<div class="container py-5">
+		<div class="row justify-content-center">
+			<div class="col-lg-10 text-center">
+				<h1 class="display-3 text-white animated slideInDown">Contact</h1>
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb justify-content-center">
+						<li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+						<li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+						<li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
+					</ol>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div>
+<section id="">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-sm-6">
+				<div class="login-form">
+					<h2>Login to your account</h2>
+					<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+					<form asp-action="Create" asp-controller="Account">
+						<div class="form-group">
+							<label>UserName</label>
+							<input asp-for="UserName" class="form-control" />
+							<span asp-validation-for="UserName" class="text-danger" />
+						</div>
+
+						<div class="form-group">
+							<label>Email</label>
+							<input asp-for="Email" class="form-control" />
+							<span asp-validation-for="Email" class="text-danger" />
+						</div>
+
+						<div class="form-group">
+							<label>Password</label>
+							<input asp-for="Password" class="form-control" />
+							<span asp-validation-for="Password" class="text-danger" />
+						</div>
+						<br />
+						<button type="submit" class="btn btn-primary">Create</button>
+
+					</form>
+				</div><!--/login form-->
+			</div>
+		</div>
+	</div>
+</section>
+

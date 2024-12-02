@@ -1,0 +1,51 @@
+@model IEnumerable<eLearning.Models.EnrollmentFormModel>
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="container-fluid"> 
+    <div class="dash__box dash__box--shadow dash__box--bg-white dash__box--radius u-s-m-b-30">
+        <br><br>
+
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h4 class="section-title bg-white text-center text-primary px-3">List Enrollment Form</h4>
+        </div>
+
+        <div class="dash__table-2-wrap gl-scroll">
+            <table class="dash__table-2 table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Enrollment Code</th>
+                        <th>Email</th>
+                        <th>Name</th>
+                        <th>Created Date</th>
+                        <th>Field</th>
+                        <th>Manage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th>@item.Id</th>
+                            <td>@item.EnrollmentCode</td>
+                            <td>@item.Email</td>
+                            <td>@item.Name</td>
+                            <td>@item.CreatedDate.ToString("dd/MM/yyyy")</td>
+                            <td>@item.FieldId</td>
+                            <td>
+                                <a href="/AD/AD/Edit/@item.Id" class="btn btn-primary btn-sm">Edit</a>
+                                <a href="/AD/AD/Detail/@item.Id" class="btn btn-info btn-sm">Detail</a>
+                                <a href="/AD/AD/Delete/@item.Id" class="btn btn-danger btn-sm">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br><br>
+

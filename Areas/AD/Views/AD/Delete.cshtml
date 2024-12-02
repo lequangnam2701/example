@@ -1,0 +1,25 @@
+@model eLearning.Models.EnrollmentFormModel
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="container-fluid"> 
+    <br><br>
+
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h4 class="section-title bg-white text-center text-primary px-3">Delete Enrollment Form</h4>
+    </div>
+
+    <div class="text-center">
+        <p >Are you sure you want to delete the enrollment form for @Model.Name?</p>
+        <form asp-action="DeleteConfirmed" method="post">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-danger">Yes, Delete</button>
+            <a href="/AD/AD/Index" class="btn btn-secondary">Cancel</a>
+            <br><br>
+            <br><br>
+        </form> 
+    </div>
+</div>
+

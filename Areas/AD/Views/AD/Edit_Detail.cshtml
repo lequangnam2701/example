@@ -1,0 +1,66 @@
+@model eLearning.Models.EnrollmentFormModel
+
+<div class="container-fluid"> 
+    <br><br>
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h4 class="section-title bg-white text-center text-primary px-3">Edit Enrollment Form</h4>
+    </div>
+
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label asp-for="EnrollmentCode" class="form-label"></label>
+            <input asp-for="EnrollmentCode" class="form-control" />
+            <span asp-validation-for="EnrollmentCode" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="CreatedDate" class="form-label"></label>
+            <input asp-for="CreatedDate" class="form-control" />
+            <span asp-validation-for="CreatedDate" class="text-danger"></span>
+        </div>
+
+        <!-- Enrollment Details -->
+        <div class="mb-3">
+            <label asp-for="EnrollmentDetails.University" class="form-label"></label>
+            <input asp-for="EnrollmentDetails.University" class="form-control" />
+            <span asp-validation-for="EnrollmentDetails.University" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="EnrollmentDetails.EnrollmentNumber" class="form-label"></label>
+            <input asp-for="EnrollmentDetails.EnrollmentNumber" class="form-control" />
+            <span asp-validation-for="EnrollmentDetails.EnrollmentNumber" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="EnrollmentDetails.Field" class="form-label"></label>
+            <input asp-for="EnrollmentDetails.Field" class="form-control" />
+            <span asp-validation-for="EnrollmentDetails.Field" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="EnrollmentDetails.MarksSecured" class="form-label"></label>
+            <input asp-for="EnrollmentDetails.MarksSecured" class="form-control" />
+            <span asp-validation-for="EnrollmentDetails.MarksSecured" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="/AD/AD/Index" class="btn btn-secondary">Back to List</a>
+    </form>
+</div>
+
+
